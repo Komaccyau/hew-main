@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/sanitize.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Noto+Serif+JP&family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/img/favicon/favicon.ico" sizes="16x16">
+    <title>HALZAPトップ</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="">
+                <img class="logo_img" src="../static/img/halzap_logo.png" alt="ロゴ">
+            </a>
+        </header>
+        <main>
+            <div class="main_text">
+                <h1 class="main_text_title">未来の筋トレを、体験しよう</h1>
+                <P>AI画像認識が可能にする<br>
+                    新たなアプリケーションが<br>
+                    ここに誕生しました。</P>
+            </div>
+
+            <a href="{{ url_for('home') }}"><div class="button btn">始める</div></a>
+        
+          <p class="result_text">
+            <div class="img_slide_div">
+            {% for i in range(3) %}
+                <div class="main_img main_img{{i}}">
+                    <img src="../static/img/slideshow{{i}}.jpg" alt="メインビジュアル{{i}}">
+                </div>
+            {% endfor %}
+            </div>
+
+            <div class="detail_text">
+                <div class="detail_text_1">
+                    <div class="detail_text_p">
+                        <p class="text_font">誰でもどこでも正しく効率のいい筋トレ！<br>
+                            運動習慣をつけたい、瘦せたい、筋肉をつけたい、モテ...<br>
+                            そんなあなた！気軽に理想の体を目指そう！
+                        </p>
+                    </div>
+                    <img src="../static/img/rightphoto.jpg" alt="詳しい画像1">
+                </div>
+                <div class="detail_text_2">
+                    <img src="../static/img/leftphoto.jpg" alt="詳しい画像2">
+                    <div class="detail_text_p">
+                        <p class="text_font">AIがあなたの骨格を読み取って見本と比較！<br>
+                            あなたにとって的確な指示をし、<br>
+                            あなたの目標を全力でサポート！
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="{{ url_for('home') }}"><div class="button btn">始める</div></a>
+        </main>
+        <footer>
+            <small>&copy 2023 HALZAP</small>
+        </footer>
+    </div>
+</body>
+
+</html>

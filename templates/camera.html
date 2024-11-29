@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../static/css/sanitize.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet">
+  <script src="../static/js/script.js" defer></script>
+  <link rel="icon" href="../static/img/favicon/favicon.ico" sizes="16x16">
+  <title>HALZAP撮影画面</title>
+</head>
+
+<body>
+  <div class="camera-wrapper">
+    <div id="loading">
+      <div class="loader">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+      </div>
+    </div>
+    <div class="camera">
+      <video id="video">Video stream not available.</video>
+    </div>
+    <p id="leftside">左を向いて撮影してください。</p>
+    <button class="btn" id="startbutton">撮影開始</button>
+    {% if exercisetype_id == 2 %}
+      <audio id="btn_audio">
+        <source src="../static/audio/sound_2.mp3" type="audio/mp3">
+      </audio>
+    {% else %}
+      <audio id="btn_audio">
+        <source src="../static/audio/sound.mp3" type="audio/mp3">
+      </audio>
+    {% endif %}
+    <p id="rec">撮影中</p>
+    <button class="btn" id="stopbutton">撮影終了</button>
+    <div id="result_video">
+      <h1 id="check_text">撮影できました、この動画でいいですか？</h1>
+      <video id="test"></video>
+      <button class="btn" id="ok" type="submit">OK</button>
+      <a class="btn" id="ng" href="{{ url_for('camera', exercisetype_id=exercisetype_id)}}">撮りなおす</a>
+      <a class="btn" id="next" href="{{ url_for('camera_check', exercisetype_id=exercisetype_id)}}">次へ</a>
+    </div>
+    <a class="modoru_button btn" href="{{ url_for('home', exercisetype_id=exercisetype_id)}}">HOMEに戻る</a>
+  </div>
+</body>
+
+</html>

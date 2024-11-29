@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/sanitize.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="icon" href="../static/img/favicon/favicon.ico" sizes="16x16">
+    <title>HALZAP撮影確認画面</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="camera_check_title">あなたのフォームを解析中です。</h1>
+        <a class="result_button btn" href="{{ url_for('result', exercisetype_id=exercisetype_id)}}">結果を見る</a>
+    </div>
+</body>
+
+</html>

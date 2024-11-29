@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/sanitize.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link rel="icon" href="../static/img/favicon/favicon.ico" sizes="16x16">
+    <title>HALZAPエラー</title>
+</head>
+
+<body>
+    <h1 class="error_title">解析エラーです。以下の項目をチェックして、もう一度撮りなおしてください。</h1>
+    <ul class="error_check_list">
+        <p class="error_check_text">身体全体が映っていますか？<br>
+        明るい場所で撮影していますか？<br>
+        ガイド音声に合わせて体を動かしましたか？</p>
+    </ul>
+    <a class="torinaoshi_button btn" href="{{ url_for('camera', exercisetype_id=exercisetype_id) }}">もう一度撮りなおす</a>
+</body>
+
+</html>

@@ -1,0 +1,657 @@
+@charset "UTF-8";
+
+html {
+  font-size: 10px;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+  line-height: 1.8;
+  font-size: 1.6rem;
+  background-color: black;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* 全体 */
+.wrapper {
+  background-color: #000;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+header {
+  background-color: #000;
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.logo_img {
+  height: 100%;
+  display: block;
+}
+
+header i {
+  color: #fff;
+  font-size: 4rem;
+  margin-right: 3rem;
+  position: absolute;
+  right: 5%;
+}
+
+.text_font{
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* index.html */
+/* main */
+main {
+  max-width: 100vw;
+  background-color: #000;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 4rem;
+  flex: 1;
+  width: 100rem;
+}
+
+main .main_text {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main_text_title{
+  font-size: 4rem;
+  padding: 5rem 0 0 0;
+  font-style: italic;
+  text-shadow: #555 -25px 25px 6px;
+}
+
+main .main_text p {
+  font-size: 3rem;
+  padding: 7rem 0;
+  line-height: 7rem;
+  font-style: italic;
+  font-weight: bold;
+  text-shadow: 0px 0px 20px #fff;
+  animation: SlideIn 1.6s;
+  animation-duration: 2s;
+}
+
+@keyframes SlideIn{
+  0% {
+    opacity: 0;/*初期状態では透明に*/
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.button a {
+  display: block;
+}
+
+.img__main {
+  text-align: center;
+  margin: 6rem 4rem 2rem 4rem;
+}
+
+.img__main img {
+  width: 100%;
+}
+
+.img_slide_div {
+  text-align: center;
+  margin: 8rem 0rem 2rem 0rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 55.5rem;
+}
+
+.main_img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main_img1{
+  animation: fadeslide 9s 0s infinite both;
+}
+
+.main_img2{
+  animation: fadeslide 9s 3s infinite both;
+}
+
+.main_img3{
+  animation: fadeslide 9s 6s infinite both;
+}
+
+@keyframes fadeslide {
+	0% { left: 0; opacity: 0; }
+	5% { left: 0; opacity: 1; }
+	20% { left: 0; opacity: 1; }
+	25% { left: 0; opacity: 0; }
+	26% { left: 100%; opacity: 0; }
+	100% { left: 100%; opacity: 0; }
+}
+
+.img_slide_div img {
+  width: 100%;
+}
+
+.detail_text {
+  padding: 2rem;
+}
+
+.detail_text_1,
+.detail_text_2 {
+  display: flex;
+  justify-content: space-around;
+  margin: 6rem 0;
+  line-height: 2.5;
+  padding: 0 5rem;
+}
+
+.detail_text_3 {
+  display: none;
+}
+
+.detail_text_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail_text div img {
+  width: 40%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  height: 10rem;
+  overflow: hidden;
+}
+
+/* home.html */
+h1 {
+  padding: 2rem;
+}
+
+.training {
+  margin: 7rem auto;
+  width: 50rem;
+}
+
+.training input {
+  display: none;
+}
+
+.training_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 0 1rem;
+  border: 6px outset #ccc;
+}
+
+.training_title h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: auto;
+}
+
+.training_title img {
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.left{
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 200, 0);
+  margin: 20px auto;
+}
+
+/*アコーディオン全体*/
+.accordion-area{
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin:0 auto;
+}
+
+.accordion-area li{
+  margin: 10px 0;
+}
+
+.accordion-area section {
+border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+  position: relative;/*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size:25px;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+.accordion_top{
+  display: flex;
+}
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after{
+  position: absolute;
+  content:'';
+  width: 15px;
+  height: 2px;
+  background-color: #ffffff;
+  
+}
+.title::before{
+  top:48%;
+  left: 35px;
+  transform: rotate(0deg);
+  
+}
+.title::after{    
+  top:48%;
+  left: 35px;
+  transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before{
+transform: rotate(45deg);
+}
+
+.title.close::after{
+transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.box {
+  display: none;/*はじめは非表示*/
+  background: #4e4e4e6a;
+  margin:0% 3% 3% 3%;
+  padding: 2% 3% 2% 3%;
+}
+
+.accordion_button a{
+  display: block;
+}
+
+.accordion_button a:hover{
+  background-color: #000;
+  transition: 0.5s;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+h2{
+  text-align: center;
+  margin: 30px 0;
+  font-size:1rem;
+}
+
+
+
+/* プルダウン中身 */
+.training_pull-down {
+  display: none;
+}
+
+.training_pull-down p,
+.training_pull-down a {
+  background-color: #888;
+  color: #fff;
+  border: #fff solid 0.1rem;
+  margin: 1rem auto;
+  width: 70%;
+  padding: 2rem;
+}
+
+.training_pull-down a {
+  display: block;
+  width: 30%;
+  margin: 2rem auto;
+}
+
+#check_input_start_1[type=checkbox]:checked~.training_pull-down,
+#check_input_start_2[type=checkbox]:checked~.training_pull-down,
+#check_input_start_3[type=checkbox]:checked~.training_pull-down {
+  display: block;
+}
+
+/* 戻るボタン */
+.backpage-button {
+  background-color: #000;
+  position: fixed;
+  display: block;
+  border-radius: 50%;
+  border: #fff solid 0.1rem;
+  width: 5rem;
+  height: 5rem;
+  bottom: 5rem;
+  right: 15rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.backpage-button p {
+  margin: 0 auto;
+}
+
+/* result.html */
+.training-result {
+  font-size: 3rem;
+}
+
+.result {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.result_title{
+  font-size: 30px;
+  margin: 15px auto;
+  border-radius: 50%;
+  background: -moz-linear-gradient(to bottom,#000000,#002ccd 50%,#000000); 
+  background: -webkit-linear-gradient(to bottom,#000000,#002ccd 50%,#000000); 
+  background: linear-gradient(to bottom,#000000,#002ccd 50%,#000000);
+}
+
+.result_title2{
+  margin: 30px auto;
+  border-radius: 50%;
+}
+
+.result_img{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 55%;
+}
+
+.result_img img {
+  display: block;
+  margin: 3rem auto;
+  width: 90%;
+}
+
+.result_text_frame{
+  border: 1px #FFF solid;
+}
+
+.result_text{
+  line-height: 2.5;
+  margin: 20px auto;
+}
+
+.decision_result_frame{
+  border: 1px #FFF dotted;
+}
+
+.decision_result{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.category{
+  padding: 1px 5px;
+  margin-right: 5rem;
+}
+
+.decision{
+  padding: 1px 5px;
+  margin-left: 5rem;
+}
+
+.wrapper .owaru_button{
+  margin: 40px auto;
+}
+
+.result_judgement {
+  border: #fff solid 0.1rem;
+}
+
+.result_judgement p {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text_large {
+  font-size: 4rem;
+}
+
+.result_end {
+  border: #fff solid 0.1rem;
+}
+
+
+/* video.html */
+.video {
+  width: 100%;
+  height: 100vh;
+}
+
+.video-wrapper .video-next {
+  position: absolute;
+  bottom: 90px;
+  right: 20px;
+  z-index: 100;
+  background: linear-gradient(to bottom,#002278,#002278 50%,#002ccd); 
+  width: 200px;
+}
+
+.btn {
+  background: linear-gradient(to bottom,#002278,#00227876 50%,#002ccd); 
+  width: 70%;
+  height: 50px;
+  margin: auto;
+  border: 0.1rem solid #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover:not(.video-next:hover) {
+  background: linear-gradient(to bottom,#001e8d,#00123d76 50%,#001e8d); 
+}
+
+.btn a {
+  color: #fff;
+}
+
+/*camera.css*/
+.camera-wrapper .btn {
+  margin: 20px auto;
+  width: 720px;
+}
+
+#result_video {
+    display: none;
+    color: #ffffff;
+}
+
+#startbutton{
+  margin: 10px auto;
+}
+
+#stopbutton{
+  display: none;
+  justify-content: center;
+  padding-top: 9px;
+}
+
+#next{
+    display: none;
+    padding-top: 9px;
+}
+
+#rec {
+    color: rgb(0, 255, 0);
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px auto;
+}
+
+#ok{
+  margin: 30px auto 0px auto;
+}
+
+#loading{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000c1;
+  z-index: 100;  
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 80px;
+  height: 80px;
+}
+
+.loader div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  opacity: .8;
+}
+.one {
+  border-top: 3px solid #e677ff;
+  animation: rotate-left 1s linear infinite;
+}
+
+.two {
+  border-right: 3px solid #6c6aff;
+  animation: rotate-right 1s linear infinite;
+}
+
+.three {
+  border-bottom: 3px solid #3355ff;
+  animation: rotate-right 1s linear infinite;
+}
+
+.four {
+  border-left: 3px solid #00c8ff;
+  animation: rotate-right 1s linear infinite;
+}
+
+.camera-wrapper{
+  height:100%;
+  background-color: black;
+  text-align: center;
+}
+
+#leftside{
+  color: white;
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 40px auto;
+}
+
+.camera_check_title{
+    color: #fff;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.result_button{
+    width: 720px;
+}
+
+/*error.html*/
+  
+.error_check_list{
+    line-height: 2.5;
+    margin: 20px auto;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.error_title{
+    color: #FFF;
+    font-size: 2.5;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.error_check_text{
+  color: white;
+}
+

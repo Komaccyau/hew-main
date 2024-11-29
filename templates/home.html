@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/sanitize.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/536bb21d33.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../static/img/favicon/favicon.ico" sizes="16x16">
+    <title>HALZAPホーム</title>
+</head>
+
+<body>
+    <div class="wrapper home-wrapper">
+        <header>
+            <a href="{{ url_for('top') }}">
+                <img class="logo_img" src="../static/img/halzap_logo.png" alt="ロゴ">
+            </a>
+        </header>
+
+
+        <main>
+            <h1 class="home_h1">筋トレ選択</h1>
+            <ul class="accordion-area">
+                <li>
+                    <section>
+                        <h3 class="title">腕立て伏せ</h3>
+                        <div class="box">
+                            <p>音や指示に合わせてをしましょう。<br>
+                                見本の動画と同じタイミングで、肘、膝の角度や、腰の高さに注意してやってみましょう。<br>
+                                <span class="left">左を向いて撮影してください。</span>
+                            </p>
+                            <a href="{{ url_for('video', exercisetype_id=0)}}"><div class="accordion_button btn">撮影する</div></a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">スクワット</h3>
+
+                        <div class="box">
+                            <p>音や指示に合わせてスクワットをしましょう。<br>
+                                見本の動画と同じタイミングで、膝の曲げ具合やスピードを注意してやってみましょう。<br>
+                                <span class="left">左を向いて撮影してください。</span>
+                            </p>
+                            <a href="{{ url_for('video', exercisetype_id=1)}}"><div class="accordion_button btn">撮影する</div></a>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <section>
+                        <h3 class="title">腹筋</h3>
+                        <div class="box">
+                            <p>音や指示に合わせて腹筋をしましょう。<br>
+                                見本の動画と同じタイミングで、膝や首の角度に注意してやってみましょう。<br>
+                                <span class="left">左を向いて撮影してください。</span>
+                            </p>
+                            <a href="{{ url_for('video', exercisetype_id=2)}}"><div class="accordion_button btn">撮影する</div></a>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+
+        </main>
+        <footer>
+            <small>&copy 2023 HALZAP</small>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../static/js/accodion.js"></script>
+</body>
+
+</html>
